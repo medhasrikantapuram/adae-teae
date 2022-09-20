@@ -9,7 +9,7 @@ altair==4.2.0
 pyparsing==3.0.9
 contourpy==1.0.2
 cycler==0.10.0
-dateutil==2.8
+dateutil==2.8.2
 fontTools==4.22.0
-packaging==20.1
-Pillow==6.3
+packaging==21.3
+Pillow==9.2.0
