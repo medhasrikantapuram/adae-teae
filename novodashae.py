@@ -2,8 +2,8 @@ import streamlit as st
 import warnings 
 import pandas as pd
 import numpy as np
-#import matplotlib
-# import matplotlib.pyplot as plt
+import matplotlib
+import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.express as px
 import datetime as dt
@@ -52,8 +52,8 @@ if chart_selector=="Stacked Bar - Treatment Emergent Adverse Events":
   st.plotly_chart(fig2,use_container_width = True)
 if chart_selector=="Heat Map - Event Rate":
   st.write("### Top 24 Treatment Emergent Adverse Event Rates")
-  #fig = plt.figure(figsize=(15,12))  
-  sns.set(rc = {'figure.figsize':(15,12)})
-  p=sns.heatmap(heat_data, annot=True, cmap='rocket_r',fmt='.2f')
+  fig = plt.figure(figsize=(15,12))  
+  #sns.set(rc = {'figure.figsize':(15,12)})
+  sns.heatmap(heat_data, annot=True, cmap='rocket_r',fmt='.2f')
   #p.set(xlabel="Treatment",ylabel="Adverse Event",title="Top 25 Treatment Emergent Adverse Event Rates")
-  st.pyplot(p,use_container_width = True)
+  st.pyplot(fig,use_container_width = True)
