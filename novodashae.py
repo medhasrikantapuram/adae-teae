@@ -47,7 +47,7 @@ if chart_selector=="Stacked Bar - Treatment Emergent Adverse Events":
   fig2 = px.histogram(df3_subset, x="TRTA", color="AEDECOD",color_discrete_sequence=px.colors.qualitative.Light24)
   fig2.update_layout(
       legend_title="Adverse Events",
-      xaxis_title="Arms",
+      xaxis_title="Treatment",
       yaxis_title="Count")
   st.plotly_chart(fig2,use_container_width = True)
 if chart_selector=="Heat Map - Event Rate":
