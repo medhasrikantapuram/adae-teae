@@ -35,7 +35,7 @@ adv_eve = adv_eve.sort_values(['TRTA','AEDECOD'])
 adv_eve = adv_eve.reset_index(drop=True)
 adv_eve = adv_eve[adv_eve['AEDECOD'].isin(top_24)]
 heat_data = adv_eve.pivot("AEDECOD", "TRTA", "event_rate")
-st.header("Demographics and baseline characteristics by treatment")
+st.header("Overview of Adverse Events")
 chart_selector = st.sidebar.selectbox("Select the type of chart", ['Treemap - Participation Overview','Stacked Bar - Treatment Emergent Adverse Events','Heat Map - Event Rate'])
 if chart_selector=="Treemap - Participation Overview":
   st.write("### Standardized Disposition Term")
