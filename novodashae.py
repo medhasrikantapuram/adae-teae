@@ -55,5 +55,7 @@ if chart_selector=="Heat Map - Event Rate":
   fig = plt.figure(figsize=(15,12))  
   #sns.set(rc = {'figure.figsize':(15,12)})
   sns.heatmap(heat_data, annot=True, cmap='rocket_r',fmt='.2f')
+  plt.xlabel("Treatment")
+  plt.ylabel("Adverse Event")
   #p.set(xlabel="Treatment",ylabel="Adverse Event",title="Top 25 Treatment Emergent Adverse Event Rates")
   st.pyplot(fig,use_container_width = True)
